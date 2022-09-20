@@ -17,13 +17,13 @@
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-                <string>ph.lhl.pautangpeso</string>
+                <string>com.modalnasional.fintech</string>
                 <key>bundle-version</key>
-                <string>1.0.2</string>
+                <string>2.0.1</string>
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
-                <string>PautangPeso</string>
+                <string>monas</string>
             </dict>
         </dict>
     </array>
