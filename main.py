@@ -55,7 +55,7 @@ class IOSAppDeploy:
             f.write(txt)
         return plist_name
 
-    def generate_single_sheet(self, sheet, out_path):
+    def generate_single_sheet(self, sheet_title, sheet, out_path):
         if not os.path.exists(out_path):
             os.makedirs(out_path)
         html_txt = ''
@@ -66,7 +66,7 @@ class IOSAppDeploy:
             name = row[0].value
             version = row[2].value
             plist_name = self.generate_some_plist(idx, row, out_path)
-            plist_path = '%s%s' % (self.SITE_ROOT, plist_name)
+            plist_path = '%s%s/%s' % (self.SITE_ROOT, sheet_title, plist_name)
             href = 'itms-services://?action=download-manifest&url=%s' % plist_path
             html_txt += '<li><a href="%s">%s(%s)</a></li>\n' % (href, name, version)
         if not html_txt:
@@ -92,7 +92,7 @@ class IOSAppDeploy:
             sheet_title = self.check_file_name(sheet.title)
             sheet_path = '%s%s/' % (self.DIST_PATH, sheet_title)
             html_txt += '<li><a href="./%s/index.html">%s</a></li>\n' % (sheet_title, sheet_title)
-            self.generate_single_sheet(sheet, sheet_path)
+            self.generate_single_sheet(sheet_title, sheet, sheet_path)
         txt = top_doc.replace('%list_content%', html_txt)
         time_txt = datetime.datetime.now().strftime("%Y%m%d %H%M%S")
         txt = txt.replace('%update_date%', time_txt)
