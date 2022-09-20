@@ -8,6 +8,8 @@ ios apps develop
 访问网站：
 https://cop-dev.github.io/ios-apps
 
+![image](https://cop-dev.github.io/ios-apps/qrcode.png)
+
 ### 开发者使用方法
 1. clone项目
 2. 修改项目中的xlsx文件，如需添加则填写以下内容
