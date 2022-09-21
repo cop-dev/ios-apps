@@ -6,3 +6,5 @@ __pycache__
 sugar/*.db
 sugar/*.ini
 dist/
+node_modules/
+package-lock.json
