@@ -1,6 +1,7 @@
 <template>
   <div>
-    <van-nav-bar title="IOS APP" placeholder static/>
+    <van-nav-bar title="IOS APPS" placeholder fixed/>
+    <van-notice-bar scrollable left-icon="volume-o" text="如果无法打开，请使用系统自带浏览器重试！"/>
     <div class="list-con">
       <van-cell-group :title="`更新时间：${updateTime}`">
         <van-cell v-for="(it, idx) in catList" :key="idx" @click="onItemClick(it)"

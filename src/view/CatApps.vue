@@ -1,11 +1,15 @@
 <template>
   <div>
-    <van-nav-bar :title="category" placeholder static left-arrow @click-left="_routerBack"/>
-    <div class="list-con">
+    <van-nav-bar :title="category" placeholder fixed left-arrow @click-left="_routerBack" left-text="返回"/>
+    <van-notice-bar scrollable left-icon="volume-o" text="如果无法打开，请使用系统自带浏览器重试！"/>
+    <div class="list-con" v-if="appList.length">
       <van-cell-group :title="category">
         <van-cell v-for="(it, idx) in appList" :key="idx" @click="onItemClick(it)"
                   :value="it.version" :title="it.name" :label="it.bundle_id" is-link size="large"/>
       </van-cell-group>
+    </div>
+    <div v-else>
+      <van-empty description="内容为空" />
     </div>
   </div>
 </template>
