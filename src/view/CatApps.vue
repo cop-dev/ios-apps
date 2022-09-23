@@ -5,7 +5,7 @@
     <div class="list-con" v-if="appList.length">
       <van-cell-group :title="category">
         <van-cell v-for="(it, idx) in appList" :key="idx" @click="onItemClick(it)"
-                  :value="it.version" :title="it.name" :label="it.bundle_id" is-link size="large"/>
+                  :value="`${it.version}(${it.build})`" :title="it.name" :label="it.bundle_id" is-link size="large"/>
       </van-cell-group>
     </div>
     <div v-else>

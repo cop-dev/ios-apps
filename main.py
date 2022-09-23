@@ -63,11 +63,13 @@ class IOSAppDeploy:
             name = row[0].value
             bundle_id = row[1].value
             version = row[2].value
+            build = row[4].value
             plist_name = self.generate_some_plist(idx, row, out_path)
             plist_path = '%s%s/%s' % (self.SITE_ROOT, sheet_title, plist_name)
             href = 'itms-services://?action=download-manifest&url=%s' % plist_path
             js_list.append(
-                {'category': sheet_title, 'name': name, 'version': version, 'href': href, 'bundle_id': bundle_id})
+                {'category': sheet_title, 'name': name, 'version': version,
+                 'build' : build, 'href': href, 'bundle_id': bundle_id})
         js_obj['apps'] = js_list
         js_path = '%s/index.json' % out_path
         with open(js_path, 'w', encoding='utf-8') as f:
