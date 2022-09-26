@@ -2,7 +2,8 @@
 ios apps develop
 
 ### 项目宗旨
-* 该项目旨在方便ios APP方便分发
+* 该项目旨在方便ios测试包分发
+* 可替代类似蒲公英的分发平台，我的分发我做主
 
 ### 使用方法
 访问网站：
@@ -16,6 +17,7 @@ https://cop-dev.github.io/ios-apps
     * app名称
     * bundle id
     * app版本号
+    * app build
     * ipa下载路径
 3. git仓库提交，等待几分钟后即可
 

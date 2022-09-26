@@ -9,12 +9,14 @@
       </van-cell-group>
     </div>
     <div v-else>
-      <van-empty description="内容为空" />
+      <van-empty description="内容为空"/>
     </div>
   </div>
 </template>
 
 <script>
+  import {Dialog} from 'vant';
+
   export default {
     name: "CatApps",
     data() {
@@ -33,8 +35,12 @@
     },
     methods: {
       onItemClick(it) {
-        this._showToast(`安装 ${it.name} ${it.version}`);
-        window.location.href = it.href;
+        Dialog.confirm({
+          title: '安装IOS应用',
+          message: `若没有反应请使用系统自带浏览器打开\n是否安装 ${it.name} ${it.version}?`,
+        }).then(() => {
+          window.location.href = it.href;
+        }).catch(()=>{});
       },
       loadAppList() {
         this._showLoading();

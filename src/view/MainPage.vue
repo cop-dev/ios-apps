@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar title="IOS APPS" placeholder fixed/>
+    <van-nav-bar title="IOS APPS" placeholder fixed right-text="关于" @click-right="onClickAbout"/>
     <van-notice-bar scrollable left-icon="volume-o" text="如果无法打开，请使用系统自带浏览器重试！"/>
     <div class="list-con">
       <van-cell-group :title="`更新时间：${updateTime}`">
@@ -34,6 +34,9 @@
       })
     },
     methods: {
+      onClickAbout(){
+        window.location.href = 'https://github.com/cop-dev/ios-apps'
+      },
       onItemClick(it) {
         this._routePushQ('CatApps', {cat: it.name});
       },
