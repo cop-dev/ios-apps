@@ -11,7 +11,7 @@
                     <key>kind</key>
                     <string>software-package</string>
                     <key>url</key>
-                    <string>https://bitbucket.org/cop-dev/ios-apps/downloads/pautangpeso1.0.22.ipa</string>
+                    <string>https://bitbucket.org/cop-dev/ios-apps/downloads/pautangpeso1.0.2_2_test.ipa</string>
                 </dict>
             </array>
             <key>metadata</key>
@@ -23,7 +23,7 @@
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
-                <string>PautangPeso</string>
+                <string>PautangPeso(test)</string>
             </dict>
         </dict>
     </array>
