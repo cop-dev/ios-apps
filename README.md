@@ -20,6 +20,9 @@ https://cop-dev.github.io/ios-apps
     * app build
     * ipa下载路径
 3. git仓库提交，等待几分钟后即可
+4. ipa下载路径问题：可以为任何http链接，为了减少git库大小，
+   ipa包没有放在git库中，可以使用任意第三方文件服务器，
+   目前我使用bitbucket还不错
 
 ### 原理
 每次代码提交main分支，可触发github任务，
